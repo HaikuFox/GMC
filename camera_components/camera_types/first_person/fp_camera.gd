@@ -10,6 +10,7 @@ extends Camera3D
 
 var _owner: Node3D
 
+
 func _ready() -> void:
 	setup_mouse_visibility()
 	sync_sensitivity()
@@ -26,12 +27,15 @@ func rotate_camera(mouse_position: InputEventMouseMotion) -> void:
 	rotate_x(-mouse_position.relative.y * vertical_sensitivity)
 	rotation.x = clamp(rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
+
 func set_owner_var():
 	_owner = owner
+
 
 func sync_sensitivity():
 	if is_sensitivity_synced:
 		vertical_sensitivity = horizontal_sensitivity
+
 
 func setup_mouse_visibility():
 	if is_mouse_visible:
