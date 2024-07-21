@@ -1,8 +1,9 @@
+class_name FPCamera
 extends Camera3D
 
 @export_category("Input")
-@export_range(0.001, 1, 0.01) var vertical_sensitivity: float = 0.02
-@export_range(0.001, 1, 0.01) var horizontal_sensitivity: float = 0.02
+@export_range(0.001, 1, 0.001) var vertical_sensitivity: float = 0.002
+@export_range(0.001, 1, 0.001) var horizontal_sensitivity: float = 0.002
 @export var is_input_enabled: bool = true
 @export var is_sensitivity_synced: bool = true
 @export_category("Other")
